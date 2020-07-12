@@ -1,0 +1,115 @@
+*,*::before,
+*,*::after {
+  box-sizing: inherit;
+}
+
+cursor {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $ttTravels;
+  font-size: 11px;
+  line-height: 13px;
+  cursor: none;
+  font-weight: 300;
+  color: $black;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1306px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.some-text {
+  position: absolute;
+  top: 50%;
+  font-family: $schnyderXCondXL;
+  font-size: 126px;
+  line-height: 108px;
+  transform: rotate(-1.5deg);
+  font-weight: 700;
+  color: #580300;
+  text-transform: uppercase;
+
+  &--left {
+    left: 0;
+  }
+
+  &--right {
+    right: 2px;
+    transform: rotate(1.5deg);
+  }
+
+  @media (max-width: 1024px) {
+    top: 33%;
+    font-size: 90px;
+    line-height: 85px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 50px;
+    line-height: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+

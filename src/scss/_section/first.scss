@@ -1,0 +1,15 @@
+.main {
+  margin-top: 7px;
+  height: 100vh;
+  background: url("../img/main-decor.svg") no-repeat 53% top;
+  background-size: 78% 92%;
+
+  @include tablets {
+    background-size: 90% 92%;
+  }
+
+  @include phones {
+    background-position: 53% -65%;
+    background-size: 78% 85%;
+  }
+}

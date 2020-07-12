@@ -1,0 +1,195 @@
+.slider {
+  max-width: 967px;
+  position: relative;
+  margin-top: -70px;
+  z-index: 5;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    min-height: 594px;
+  }
+
+  @media (max-width: 950px) {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  @include phones {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    min-height: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -160px;
+    width: 24%;
+    height: 200px;
+    background-color: #fff;
+    z-index: 10;
+
+    @media (max-width: 1024px) {
+      bottom: -75px;
+      right: 16px;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    right: 8%;
+    top: 31%;
+    opacity: 0;
+    transition: all 0.4s;
+
+    &--show {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-family: $schnyderXCondXL;
+    font-size: 144px;
+    line-height: 115px;
+    font-weight: 700;
+    color: #580300;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 1px;
+
+    @media (max-width: 1024px) {
+      font-size: 106px;
+      line-height: 95px;
+      top: 36%;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 55px;
+      line-height: 61px;
+      top: 27%;
+    }
+
+    @include phones {
+      top: 45%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+
+    @media (max-width: 760px) {
+      display: none;
+    }
+
+    &-left {
+      width: 238px;
+      transform: rotate(1.1deg);
+      position: absolute;
+      top: 110px;
+      left: 0;
+
+      @media (max-width: 1024px) {
+        width: 163px;
+        left: 80px;
+      }
+
+      @include tablets {
+        left: 10px;
+      }
+    }
+
+    &-right {
+      position: absolute;
+      bottom: 43px;
+      right: 15px;
+      width: 345px;
+      height: 238px;
+      z-index: 5;
+      overflow: hidden;
+      transform: rotate(2.03deg);
+
+      img {
+        position: absolute;
+        top: -97px;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+      }
+
+      @media (max-width: 1024px) {
+        width: 234px;
+        height: 162px;
+        right: 92px;
+        top: 269px;
+
+        img {
+          top: -63px;
+        }
+      }
+
+      @include tablets {
+        right: 19px;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    @media (max-width: 760px) {
+      display: none;
+    }
+  }
+
+  .swiper-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .swiper-slide {
+    position: relative;
+    z-index: 10;
+
+    &-active {
+      padding-right: 10px;
+
+      img {
+        transform: rotate(2.5deg);
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    width: 476px;
+
+    @media (max-width: 1024px) {
+      width: 359px;
+    }
+
+    @media (max-width: 575px) {
+      width: 273px;
+    }
+
+    @include phones {
+      margin-left: 10px;
+    }
+  }
+}

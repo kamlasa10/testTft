@@ -1,0 +1,14 @@
+.footer {
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__border {
+    width: 56px;
+    height: 1px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: rgba(#393939, 0.24);
+  }
+}
