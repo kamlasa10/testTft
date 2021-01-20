@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "gsap": "^3.4.0",
+    "gsap": "^3.6.0",
     "gulp-babel": "^8.0.0",
     "gulp-browserify": "^0.5.1",
     "gulp-cheerio": "^1.0.0",
